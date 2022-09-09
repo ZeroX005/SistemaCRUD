@@ -1,0 +1,27 @@
+﻿@model SistemaCRUD.ADO.Nacionalidad
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalle</h2>
+
+<div>
+    <h4>Nacionalidad</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Nombre:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre_nacionalidad)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.cod_nacionalidad }) |
+    @Html.ActionLink("Regresar a lista", "Index")
+</p>

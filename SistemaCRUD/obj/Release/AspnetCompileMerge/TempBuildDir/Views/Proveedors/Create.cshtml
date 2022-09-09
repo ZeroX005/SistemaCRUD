@@ -1,0 +1,78 @@
+﻿@model SistemaCRUD.ADO.Proveedor
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Crear</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Proveedor</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        <div class="control-label col-md-2">
+            <p><b>Razón Social</b></p>
+        </div>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.razon_social, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.razon_social, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="control-label col-md-2">
+            <p><b>RUC</b></p>
+        </div>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.ruc_proveedor, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.ruc_proveedor, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="control-label col-md-2">
+            <p><b>Dirección</b></p>
+        </div>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.direccionlegal_proveedor, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.direccionlegal_proveedor, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="control-label col-md-2">
+            <p><b>Distrito</b></p>
+        </div>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.distrito_proveedor, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.distrito_proveedor, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="control-label col-md-2">
+            <p><b>Departamento</b></p>
+        </div>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.departamento_proveedor, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.departamento_proveedor, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Añadir" class="btn btn-success" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Regresar a lista", "Index")
+</div>

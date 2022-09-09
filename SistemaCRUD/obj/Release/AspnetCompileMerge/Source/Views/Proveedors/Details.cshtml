@@ -1,0 +1,59 @@
+﻿@model SistemaCRUD.ADO.Proveedor
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalle</h2>
+
+<div>
+    <h4>Proveedor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Razón Social:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.razon_social)
+        </dd>
+
+        <dt>
+            RUC:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ruc_proveedor)
+        </dd>
+
+        <dt>
+            Dirección:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.direccionlegal_proveedor)
+        </dd>
+
+        <dt>
+            Distrito:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.distrito_proveedor)
+        </dd>
+
+        <dt>
+            Departamento:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.departamento_proveedor)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.cod_proveedor }) |
+    @Html.ActionLink("Regresar a lista", "Index")
+</p>

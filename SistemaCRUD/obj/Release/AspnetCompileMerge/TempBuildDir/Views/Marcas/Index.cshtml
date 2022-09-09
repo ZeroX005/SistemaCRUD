@@ -1,0 +1,34 @@
+﻿@model IEnumerable<SistemaCRUD.ADO.Marca>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Lista de Marcas</h2>
+
+<p>
+    @Html.ActionLink("Agregar marca", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Marca
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre_marca)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.cod_marca }) |
+            @Html.ActionLink("Detalle", "Details", new { id=item.cod_marca }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.cod_marca })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,64 @@
+﻿@model SistemaCRUD.ADO.Proveedor
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Eliminar</h2>
+
+<div>
+    <h4>Proveedor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Razón Social:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.razon_social)
+        </dd>
+
+        <dt>
+            RUC:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ruc_proveedor)
+        </dd>
+
+        <dt>
+            Dirección:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.direccionlegal_proveedor)
+        </dd>
+
+        <dt>
+            Distrito:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.distrito_proveedor)
+        </dd>
+
+        <dt>
+            Departamento:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.departamento_proveedor)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+            @Html.ActionLink("Regresar a lista", "Index")
+        </div>
+    }
+</div>

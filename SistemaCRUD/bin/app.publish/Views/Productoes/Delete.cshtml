@@ -1,0 +1,80 @@
+﻿@model SistemaCRUD.ADO.Producto
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Eliminar</h2>
+
+<div>
+    <h4>Producto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Nombre:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre_producto)
+        </dd>
+
+        <dt>
+            Modelo:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.modelo_producto)
+        </dd>
+
+        <dt>
+            Cantidad:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantidad)
+        </dd>
+
+        <dt>
+            Precio:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precio)
+        </dd>
+
+        <dt>
+            Categoría:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Categoria.nombre_categoria)
+        </dd>
+
+        <dt>
+            Marca:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Marca.nombre_marca)
+        </dd>
+
+        <dt>
+            Proveedor:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Proveedor.razon_social)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+            @Html.ActionLink("Regresar a lista", "Index")
+        </div>
+    }
+</div>

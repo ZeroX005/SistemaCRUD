@@ -1,0 +1,70 @@
+﻿@model IEnumerable<SistemaCRUD.ADO.Producto>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Lista de productos tecnológicos</h2>
+
+<p>
+    @Html.ActionLink("Nuevo Producto", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Modelo
+        </th>
+        <th>
+            Cantidad
+        </th>
+        <th>
+            Precio
+        </th>
+        <th>
+            Categoría
+        </th>
+        <th>
+            Marca
+        </th>
+        <th>
+            Proveedor
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre_producto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.modelo_producto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cantidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.precio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Categoria.nombre_categoria)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Marca.nombre_marca)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Proveedor.razon_social)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.cod_producto }) |
+            @Html.ActionLink("Detalle", "Details", new { id=item.cod_producto }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.cod_producto })
+        </td>
+    </tr>
+}
+
+</table>

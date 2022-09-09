@@ -1,0 +1,58 @@
+﻿@model IEnumerable<SistemaCRUD.ADO.Proveedor>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Lista de Proveedores</h2>
+
+<p>
+    @Html.ActionLink("Agregar proveedor", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Razón Social
+        </th>
+        <th>
+            RUC
+        </th>
+        <th>
+            Dirección
+        </th>
+        <th>
+            Distrito
+        </th>
+        <th>
+            Departamento
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.razon_social)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ruc_proveedor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.direccionlegal_proveedor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.distrito_proveedor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.departamento_proveedor)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.cod_proveedor }) |
+            @Html.ActionLink("Detalle", "Details", new { id=item.cod_proveedor }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.cod_proveedor })
+        </td>
+    </tr>
+}
+
+</table>

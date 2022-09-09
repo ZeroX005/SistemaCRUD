@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a7ddb7dbe28e4b4297e679a661fdef9d" Name="Diagram1">
+        <EntityTypeShape EntityType="BDCRUDINVENTARIOModel.Categoria" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDCRUDINVENTARIOModel.Marca" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDCRUDINVENTARIOModel.Nacionalidad" Width="1.5" PointX="5.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDCRUDINVENTARIOModel.Producto" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDCRUDINVENTARIOModel.Proveedor" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDCRUDINVENTARIOModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDCRUDINVENTARIOModel.Usuario" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="BDCRUDINVENTARIOModel.FK__Producto__cod_ca__60A75C0F" ManuallyRouted="false" />
+        <AssociationConnector Association="BDCRUDINVENTARIOModel.FK__Producto__cod_ma__5EBF139D" ManuallyRouted="false" />
+        <AssociationConnector Association="BDCRUDINVENTARIOModel.FK__Usuario__cod_nac__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="BDCRUDINVENTARIOModel.FK__Producto__cod_pr__5FB337D6" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

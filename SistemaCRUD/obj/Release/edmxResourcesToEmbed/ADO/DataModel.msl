@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BDCRUDINVENTARIOModelStoreContainer" CdmEntityContainer="BDCRUDINVENTARIOEntities">
+    <EntitySetMapping Name="Categoria">
+      <EntityTypeMapping TypeName="BDCRUDINVENTARIOModel.Categoria">
+        <MappingFragment StoreEntitySet="Categoria">
+          <ScalarProperty Name="cod_categoria" ColumnName="cod_categoria" />
+          <ScalarProperty Name="nombre_categoria" ColumnName="nombre_categoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Marca">
+      <EntityTypeMapping TypeName="BDCRUDINVENTARIOModel.Marca">
+        <MappingFragment StoreEntitySet="Marca">
+          <ScalarProperty Name="cod_marca" ColumnName="cod_marca" />
+          <ScalarProperty Name="nombre_marca" ColumnName="nombre_marca" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Nacionalidad">
+      <EntityTypeMapping TypeName="BDCRUDINVENTARIOModel.Nacionalidad">
+        <MappingFragment StoreEntitySet="Nacionalidad">
+          <ScalarProperty Name="cod_nacionalidad" ColumnName="cod_nacionalidad" />
+          <ScalarProperty Name="nombre_nacionalidad" ColumnName="nombre_nacionalidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Producto">
+      <EntityTypeMapping TypeName="BDCRUDINVENTARIOModel.Producto">
+        <MappingFragment StoreEntitySet="Producto">
+          <ScalarProperty Name="cod_producto" ColumnName="cod_producto" />
+          <ScalarProperty Name="nombre_producto" ColumnName="nombre_producto" />
+          <ScalarProperty Name="modelo_producto" ColumnName="modelo_producto" />
+          <ScalarProperty Name="cod_marca" ColumnName="cod_marca" />
+          <ScalarProperty Name="cod_proveedor" ColumnName="cod_proveedor" />
+          <ScalarProperty Name="cod_categoria" ColumnName="cod_categoria" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Proveedor">
+      <EntityTypeMapping TypeName="BDCRUDINVENTARIOModel.Proveedor">
+        <MappingFragment StoreEntitySet="Proveedor">
+          <ScalarProperty Name="cod_proveedor" ColumnName="cod_proveedor" />
+          <ScalarProperty Name="razon_social" ColumnName="razon_social" />
+          <ScalarProperty Name="ruc_proveedor" ColumnName="ruc_proveedor" />
+          <ScalarProperty Name="direccionlegal_proveedor" ColumnName="direccionlegal_proveedor" />
+          <ScalarProperty Name="distrito_proveedor" ColumnName="distrito_proveedor" />
+          <ScalarProperty Name="departamento_proveedor" ColumnName="departamento_proveedor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="BDCRUDINVENTARIOModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="BDCRUDINVENTARIOModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="cod_usuario" ColumnName="cod_usuario" />
+          <ScalarProperty Name="usuario1" ColumnName="usuario" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="nombre_usuario" ColumnName="nombre_usuario" />
+          <ScalarProperty Name="apellido_usuario" ColumnName="apellido_usuario" />
+          <ScalarProperty Name="dni" ColumnName="dni" />
+          <ScalarProperty Name="cod_nacionalidad" ColumnName="cod_nacionalidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,70 @@
+﻿<!--ESTE ARCHIVO NO SE MOSTRARA EN LA SOLUCIÓN WEB PORQUE PUEDE VULNERAR LA INFORMACION DE LOS USUARIOS-->
+<!--SE PUEDE ACTIVAR LA PESTAÑA DE USUARIOS EN EL ARCHIVO Shared>_Layout.cshtml-->
+
+@model SistemaCRUD.ADO.Usuario
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalle</h2>
+
+<div>
+    <h4>Usuario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Usuario:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.usuario1)
+        </dd>
+
+        <dt>
+            Password:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.password)
+        </dd>
+
+        <dt>
+            Nombre:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre_usuario)
+        </dd>
+
+        <dt>
+            Apellido:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apellido_usuario)
+        </dd>
+
+        <dt>
+            DNI:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dni)
+        </dd>
+
+        <dt>
+            Nacionalidad:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nacionalidad.nombre_nacionalidad)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.cod_usuario }) |
+    @Html.ActionLink("Regresar a lista", "Index")
+</p>
